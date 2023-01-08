@@ -1,0 +1,21 @@
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+body{
+    background-color: rgb(90,90,90);
+}
+.left{
+    float: left;
+}
+input{
+    width: 5%;
+    padding: 8px 8px;
+    font-size: 20px;
+    text-align: center;
+}
+.vertical-center {
+    margin:0;
+    position: absolute;
+}

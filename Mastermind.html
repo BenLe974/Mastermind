@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "stylesheet" type = "text/css" href="styles.css"/>
+        <body>
+            <title>Mastermind: The Password Guessing Game</title>
+            <p style="text-align: center;">Guess the random password!</p>
+            <br>
+            <div class = "container" >
+                <div class="vertical-center">
+                    <div class = "container">
+                        <label for="user_input1">Enter your guess:</label>
+                        <input type="text" id="guess1">
+                        <label for="user_input1"></label>
+                        <input type="text" id="guess2">
+                        <label for="user_input1"></label>
+                        <input type="text" id="guess3">
+                        <label for="user_input1"></label>
+                        <input type="text" id="guess4">
+                        <label for="user_input1"></label>
+                        <input type="text" id="guess5">
+                        <button id = "myButton">Submit</button>
+                    </div>
+                </div>
+            </div>
+            <script type = "text/javascript">
+                document.getElementById("myButton").onclick = function (){
+                    document.getElementById("user_input")
+                    document.getElementById("user_guess").reset();
+                };
+            </script>
+        </body> 
+    </head>
+</html>
