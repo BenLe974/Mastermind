@@ -3,30 +3,75 @@
     <head>
         <link rel = "stylesheet" type = "text/css" href="styles.css"/>
         <body>
+            <script>
+                ans1 = Math.floor(Math.random()*10)
+                ans2 = Math.floor(Math.random()*10)
+                ans3 = Math.floor(Math.random()*10)
+                ans4 = Math.floor(Math.random()*10)
+                ans5 = Math.floor(Math.random()*10)
+                let guess_count = 0
+            </script>
             <title>Mastermind: The Password Guessing Game</title>
+
             <p style="text-align: center;">Guess the random password!</p>
-            <br>
-            <div class = "container" >
+            <p style="text-align: center;">Each square corresponds to a number between 0-9</p>
+            <p style="text-align: center;">You have 5 guesses to get the correct sequence of numbers</p>
+            
+            <p id = "guesses" style = "text-align: center;"></p>
+            <script>document.getElementById("guesses").innerHTML = 5-guess_count +"/5 guesses left"</script>
+            <hr>
+            <div class = "container">
                 <div class="vertical-center">
                     <div class = "container">
                         <label for="user_input1">Enter your guess:</label>
                         <input type="text" id="guess1">
-                        <label for="user_input1"></label>
+                        <label for="user_input2"></label>
                         <input type="text" id="guess2">
-                        <label for="user_input1"></label>
+                        <label for="user_input3"></label>
                         <input type="text" id="guess3">
-                        <label for="user_input1"></label>
+                        <label for="user_input4"></label>
                         <input type="text" id="guess4">
-                        <label for="user_input1"></label>
+                        <label for="user_input5"></label>
                         <input type="text" id="guess5">
                         <button id = "myButton">Submit</button>
                     </div>
                 </div>
             </div>
+            
             <script type = "text/javascript">
                 document.getElementById("myButton").onclick = function (){
-                    document.getElementById("user_input")
-                    document.getElementById("user_guess").reset();
+                    if (document.getElementById("guess1").value == ans1){
+                        document.getElementById("guess1").style.backgroundColor = "green"
+                    }
+                    if (document.getElementById("guess1").value != ans1){
+                        document.getElementById("guess1").style.backgroundColor = "red"
+                    }
+                    if (document.getElementById("guess2").value == ans1){
+                        document.getElementById("guess2").style.backgroundColor = "green"
+                    }
+                    if (document.getElementById("guess2").value != ans1){
+                        document.getElementById("guess2").style.backgroundColor = "red"
+                    }
+                    if (document.getElementById("guess3").value == ans1){
+                        document.getElementById("guess3").style.backgroundColor = "green"
+                    }
+                    if (document.getElementById("guess3").value != ans1){
+                        document.getElementById("guess3").style.backgroundColor = "red"
+                    }
+                    if (document.getElementById("guess4").value == ans1){
+                        document.getElementById("guess4").style.backgroundColor = "green"
+                    }
+                    if (document.getElementById("guess4").value != ans1){
+                        document.getElementById("guess4").style.backgroundColor = "red"
+                    }
+                    if (document.getElementById("guess5").value == ans1){
+                        document.getElementById("guess5").style.backgroundColor = "green"
+                    }
+                    if (document.getElementById("guess5").value != ans1){
+                        document.getElementById("guess5").style.backgroundColor = "red"
+                    }
+                    guess_count = guess_count + 1
+                    document.getElementById("guesses").innerHTML = 5-guess_count +"/5 guesses left"
                 };
             </script>
         </body> 
